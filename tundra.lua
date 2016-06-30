@@ -25,6 +25,8 @@ local mac_opts = {
     "-Wno-format-nonliteral",
     "-Wno-non-virtual-dtor",
     "-DOBJECT_DIR=\\\"$(OBJECTDIR)\\\"",
+    "-Wno-microsoft-enum-value", -- enumerator value is not representable in the underlying type 'int'
+    "-Wno-microsoft-const-init", -- default initialization of an object of const type '' without a user-provided default constructor is a Microsoft extension
     { "-O0", "-g"; Config = "*-*-debug" },
     { "-O3", "-g"; Config = "*-*-release" },
 }
